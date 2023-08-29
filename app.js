@@ -20,7 +20,7 @@ const resetJokes = () => {
 
 const getDadJoke = async () => {
     try {
-        const config = { headers: { Accept: "application/json" } };
+        const config = { headers: { Accept: "application/json", "User-Agent": "DevilDogDesign (https://devildog.co.za)"} };
         const res = await axios.get("https://icanhazdadjoke.com/", config);
         return res.data.joke;
     } catch (e) {
